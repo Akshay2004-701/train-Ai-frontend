@@ -1,20 +1,19 @@
-import React from "react"
+import React from "react";
 
-interface EstimatedErningsProps {
-  number: number
+interface EstimatedEarningsProps {
+  number: number;
+  currency?: string; 
 }
 
-const EstimatedErnings = ({ number }: EstimatedErningsProps) => {
+const EstimatedEarnings = ({ number, currency = "BNB" }: EstimatedEarningsProps) => {
   return (
-    <>
-      <p className="text-primary">
-        Estimated Ernings{" "}
-        <span className="text-black font-medium pl-2 text-lg ">
-          {number} <span className="text-secondary text-sm">AR</span>
-        </span>
-      </p>
-    </>
-  )
-}
+    <p className="text-primary">
+      Estimated Earnings{" "}
+      <span className="text-black font-medium pl-2 text-lg">
+        {number} <span className="text-secondary text-sm">{currency}</span>
+      </span>
+    </p>
+  );
+};
 
-export default EstimatedErnings
+export default EstimatedEarnings;

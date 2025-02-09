@@ -72,8 +72,9 @@ export const RolesSection = () => {
         </div>
         <div className="flex flex-1 flex-col gap-10 relative" style={{ marginTop: "80px" }}>
           <div className="absolute h-full w-[1px] -top-28 left-10 -z-50">
-            <VerticleLine />
+            <VerticalLine />
           </div>
+
           {roles[selectedRole].map((role, index) => (
             <StepDetail
               key={index}
@@ -89,7 +90,7 @@ export const RolesSection = () => {
   )
 }
 
-const VerticleLine = () => {
+const VerticalLine = () => {
   return (
     <svg width="2" height="637" viewBox="0 0 2 637" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 0L1.00003 637" stroke="url(#paint0_linear_62_1942)" />
